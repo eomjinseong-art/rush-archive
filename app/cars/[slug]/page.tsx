@@ -9,6 +9,8 @@ import { SameBrandCars } from "@/components/SameBrandCars";
 import { SisterCta } from "@/components/SisterCta";
 import { Sources } from "@/components/Sources";
 import { carPhoto } from "@/data/carPhotos";
+import { carVideos } from "@/data/youtube";
+import { YoutubeLink } from "@/components/YoutubeLink";
 import { FILM_USE_HINT, brandSlug, cars, getCar, kindTone } from "@/lib/cars";
 import { breadcrumbLd, carSeoDescription, carSeoTitle, carThingLd, jsonLd, pageMetadata } from "@/lib/seo";
 import { AUTOPIX_GUIDES, CAR_CTA_LABEL, SITE_URL, autopixGuideUrl } from "@/lib/site";
@@ -77,13 +79,16 @@ export default async function CarPage({ params }: { params: Promise<{ slug: stri
         />
         {photo ? (
           <p className="mt-1 text-[11px] leading-5 text-muted">
-            영화 장면이나 촬영용 레플리카가 아니라 같은 차종의 실제 차량 사진입니다. 색·번호·세부 사양은 영화 속 차와 다를 수 있습니다.
+            {photo.referenceNote
+              ? "영화 장면이나 촬영용 레플리카가 아니라 실제 차량 사진입니다. 영화 속 차와 어떻게 다른지는 사진 아래 참고 표시에 적었습니다."
+              : "영화 장면이나 촬영용 레플리카가 아니라 같은 차종의 실제 차량 사진입니다. 색·번호·세부 사양은 영화 속 차와 다를 수 있습니다."}
           </p>
         ) : (
           <p className="mt-2 text-[11px] leading-5 text-muted">
             자유 이용 라이선스로 쓸 수 있는 실제 차량 사진을 찾지 못해 색 배경으로 둡니다.
           </p>
         )}
+        <YoutubeLink video={carVideos[car.slug]} fallbackQuery={`${car.nameEn} review`} />
       </section>
 
       <section className="mt-8">
