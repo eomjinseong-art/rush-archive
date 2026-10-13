@@ -10,6 +10,7 @@ import { brandGroups, brandSlug, cars } from "@/lib/cars";
 import { jsonLd, movieLd, pageMetadata, websiteLd } from "@/lib/seo";
 import { SITE_EN, SITE_NAME, SITE_SUB, SITE_TAGLINE, archiveNetworkUrl, otherArchives } from "@/lib/site";
 import { FEATURED, HOME_HEADLINE } from "@/lib/siteConfig";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export const metadata: Metadata = pageMetadata({
   title: SITE_NAME,
@@ -68,6 +69,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <CoupangCard />
       <section className="mx-auto max-w-6xl px-4 py-12">
         <div className="flex items-end justify-between gap-3">
           <h2 className="font-serif text-2xl text-paper">대표 차량</h2>
