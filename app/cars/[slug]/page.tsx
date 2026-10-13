@@ -15,6 +15,7 @@ import { FILM_USE_HINT, brandSlug, cars, getCar, kindTone } from "@/lib/cars";
 import { breadcrumbLd, carSeoDescription, carSeoTitle, carThingLd, jsonLd, pageMetadata } from "@/lib/seo";
 import { AUTOPIX_GUIDES, CAR_CTA_LABEL, SITE_URL, autopixGuideUrl } from "@/lib/site";
 import { CAR_CTA_LINE, FILM_SHORT } from "@/lib/siteConfig";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export function generateStaticParams() {
   return cars.map((car) => ({ slug: car.slug }));
@@ -157,6 +158,7 @@ export default async function CarPage({ params }: { params: Promise<{ slug: stri
       </p>
 
       <Sources sources={car.sources} />
+      <CoupangCard />
     </article>
   );
 }
