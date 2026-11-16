@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { cars } from "@/lib/cars";
 import { itemListLd, jsonLd, pageMetadata } from "@/lib/seo";
 import { CARS_INTRO, CARS_TITLE } from "@/lib/siteConfig";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export const metadata: Metadata = pageMetadata({
   title: CARS_TITLE,
@@ -32,6 +33,7 @@ export default function CarsPage() {
       <div className="mt-6">
         <AutopixBanner content="cars" />
       </div>
+      <CoupangCard />
       <div className="mt-8">
         <CarExplorer />
       </div>

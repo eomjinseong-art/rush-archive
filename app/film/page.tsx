@@ -6,6 +6,7 @@ import { Sources } from "@/components/Sources";
 import { FILM } from "@/data/film";
 import { breadcrumbLd, jsonLd, movieLd, pageMetadata } from "@/lib/seo";
 import { FILM_PAGE_DESCRIPTION } from "@/lib/siteConfig";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export const metadata: Metadata = pageMetadata({
   title: `${FILM.titleKo} (${FILM.year}) 영화 정보와 실화`,
@@ -104,6 +105,8 @@ export default function FilmPage() {
           실존 인물의 실제 삶은 <Link href="/people" className="text-gold">실존 인물</Link> 페이지에 따로 적었습니다.
         </p>
       </section>
+
+      <CoupangCard />
 
       <section className="mt-8">
         <h2 className="font-serif text-xl text-gold">제작과 촬영</h2>
