@@ -22,7 +22,7 @@ const serif = Noto_Serif_KR({
 });
 
 export const metadata: Metadata = {
-  verification: { google: "LglMaYLzS6dacAPQ5ZgZdPgzdtfLbp_1Rk5vh3WNPlM" },
+  verification: { google: "LglMaYLzS6dacAPQ5ZgZdPgzdtfLbp_1Rk5vh3WNPlM", other: { "naver-site-verification": "51be9aceb0952c8ad6fa9cea8adebb5799f37450" } },
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_NAME,
