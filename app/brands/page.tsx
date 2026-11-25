@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
@@ -29,6 +30,7 @@ export default function BrandsPage() {
       <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
         {brands.length}개 브랜드. 차량이 많은 브랜드부터 적었습니다. 다른 영화 아카이브에 같은 브랜드 차가 있으면 함께 잇습니다.
       </p>
+      <NadooAd inline />
       <div className="mt-8 space-y-6">
         {brands.map((entry) => {
           const sisters = sisterCarsForBrands([entry.brand]);

@@ -1,3 +1,5 @@
+import Script from "next/script";
+import { NadooAd } from "@/components/NadooAd";
 import { Noto_Sans_KR, Noto_Serif_KR } from "next/font/google";
 import type { Metadata } from "next";
 import { Footer } from "@/components/Footer";
@@ -55,9 +57,10 @@ export default function RootLayout({
         className={`${sans.variable} ${serif.variable} min-h-screen bg-bg font-sans text-paper antialiased`}
       >
         <Header />
-        <main>{children}</main>
+        <main>{children}<NadooAd /></main>
         <Footer />
         <CoupangSticky />
+        <Script src="https://nadoo-ads.vercel.app/ads.js" strategy="afterInteractive" />
       </body>
     </html>
   );

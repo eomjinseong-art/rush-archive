@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -92,6 +93,7 @@ export default async function CarPage({ params }: { params: Promise<{ slug: stri
         <YoutubeLink video={carVideos[car.slug]} fallbackQuery={`${car.nameEn} review`} />
       </section>
 
+      <NadooAd inline />
       <section className="mt-8">
         <h2 className="font-serif text-xl text-gold">한눈에</h2>
         <dl className="mt-3 divide-y divide-line rounded-lg border border-line text-sm">

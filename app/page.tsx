@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { AutopixBanner } from "@/components/AutopixBanner";
@@ -110,6 +111,7 @@ export default function HomePage() {
         </ul>
       </section>
 
+      <NadooAd inline />
       <section className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 py-12 md:grid-cols-2">
         <div>
           <h2 className="font-serif text-2xl text-paper">실존 인물</h2>

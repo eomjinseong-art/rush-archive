@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -33,6 +34,7 @@ export default function PeoplePage() {
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "실존 인물" }]} />
       <h1 className="mt-5 font-serif text-3xl text-paper">실존 인물</h1>
       <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">{PEOPLE_DESCRIPTION}</p>
+      <NadooAd inline />
       <nav className="mt-5 flex flex-wrap gap-2 text-xs">
         {people.map((p) => (
           <a key={p.id} href={`#${p.id}`} className="rounded-full border border-line px-3 py-1 text-muted hover:text-gold">
