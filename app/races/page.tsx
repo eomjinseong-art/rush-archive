@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -34,6 +35,7 @@ export default function RacesPage() {
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "레이스" }]} />
       <h1 className="mt-5 font-serif text-3xl text-paper">레이스와 서킷</h1>
       <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">{RACES_DESCRIPTION}</p>
+      <NadooAd inline />
       <ol className="mt-8 space-y-5">
         {races.map((r) => (
           <li key={r.id} id={r.id} className="scroll-mt-32 rounded-xl border border-line p-5">

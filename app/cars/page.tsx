@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import type { Metadata } from "next";
 import { AutopixBanner } from "@/components/AutopixBanner";
 import { CarExplorer } from "@/components/CarExplorer";
@@ -30,6 +31,7 @@ export default function CarsPage() {
         {CARS_INTRO} 모두 {cars.length}대입니다. 카드의 배지는 촬영에 쓴 차가 실제 차인지, 영화용 레플리카인지,
         실화에만 나오는 차인지를 뜻합니다.
       </p>
+      <NadooAd inline />
       <div className="mt-6">
         <AutopixBanner content="cars" />
       </div>

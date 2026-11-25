@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ImageCredit } from "@/components/ImageCredit";
@@ -30,6 +31,7 @@ export default function SourcesPage() {
           <li key={note.slice(0, 30)}>{note}</li>
         ))}
       </ul>
+      <NadooAd inline />
       <h2 className="mt-8 font-serif text-xl text-gold">사진</h2>
       <ul className="mt-3 list-disc space-y-2 pl-5">
         <li>포스터, 영화 스틸, 스크린숏, 홍보 이미지는 쓰지 않습니다. 촬영용 레플리카를 찍은 사진도 쓰지 않습니다.</li>
