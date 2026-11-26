@@ -58,7 +58,7 @@ export default function RootLayout({
         className={`${sans.variable} ${serif.variable} min-h-screen bg-bg font-sans text-paper antialiased`}
       >
         <Header />
-        <main>{children}<NadooAd /></main>
+        <main>{children}<NadooAd types="vpnpromo" /><NadooAd /></main>
         <Footer />
         <CoupangSticky />
         <Script src="https://nadoo-ads.vercel.app/ads.js" strategy="afterInteractive" />
